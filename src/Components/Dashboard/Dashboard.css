@@ -1,0 +1,15 @@
+.explore_content img{
+width: 100%;
+height: auto;;
+}
+
+.dash_wrap_content {
+    position: relative;
+    top: 220px;
+}
+
+.dashSide_wrap_content{
+    position: fixed;
+    width: 1200px;
+    z-index: 999;
+}
