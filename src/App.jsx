@@ -6,6 +6,8 @@ import Auth from './Components/pages/Auth';
 // import Logout from './Components/logout/Logout';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Home from './Components/pages/Home';
+import Profile from './Components/profile/profile';
+import EditProfile from './Components/profile/EditProfil';
 
 // import './App.css'
 
@@ -17,6 +19,9 @@ export default function App() {
       {isLogin? (
       <Route path="/" element={<Home/>}>
         <Route path="/" element={<Dashboard/>}/>
+        <Route path="/u/:id" element={<Profile/>}/>
+        <Route path="/editprofile" element={<EditProfile/>}/>
+
        </Route>
       )
       :

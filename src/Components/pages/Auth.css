@@ -1,0 +1,28 @@
+.user_form{
+    height: 650px;
+    /* background-color: aqua; */
+    overflow: hidden;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+
+.auth__form-login{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    transition: all 0.5s;
+
+}
+
+.auth__form-signup{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top : 100%;
+    bottom: 100%;
+    transition: all 0.5s;
+}

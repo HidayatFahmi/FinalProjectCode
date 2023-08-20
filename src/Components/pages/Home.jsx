@@ -15,10 +15,10 @@ export default function Home(){
             <div className="container-fluid home-page bg-dark">
                   <div className="container-fluid  col-12 ms-5">
                     <div className="row">
-                        <div className="col-xl-2 bg-light">
+                        <div className="col-xl-2 bg-light border-3 border-end border-dark">
                             <Navbar/>
                         </div>
-                        <div className="col-10 outlet-page bg-dark  d-flex">
+                        <div className="col-10 outlet-page bg-light d-flex">
                             <Outlet/>
                         </div>  
                     </div>   

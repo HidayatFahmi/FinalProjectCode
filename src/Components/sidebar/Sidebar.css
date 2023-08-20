@@ -6,7 +6,6 @@
 
 .scrollable-list {
     max-height: 200px ;
-    max-width: 500x;
     overflow-y: hidden; 
     overflow-x: scroll;
   }

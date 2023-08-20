@@ -1,0 +1,22 @@
+.profile__header-image img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.bt1, .bt2{
+    font-size: 20px;
+}
+
+.bt1{
+    background-color: aqua;
+}
+
+.profile__header-caption-2 {
+    font-size: 20px;
+}
+
+.profile__posts-post img{
+    width: 400px;
+    height: 370px;
+}

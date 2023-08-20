@@ -5,7 +5,7 @@ import { HashLink } from "react-router-hash-link"
 import logApi from "../../api/logApi"
 import "./Navbar.css"
 import 'boxicons/css/boxicons.min.css'
-import logo from "../../assets/images/photologue1.png"
+import logo from "../../assets/images/logo.png"
 
 
 export default function Navbar(){

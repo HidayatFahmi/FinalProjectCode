@@ -1,4 +1,48 @@
-.container1{
-    margin-top: 30px;
-    /* background-color: aqua; */
+
+.login__wrap-title img{
+    width: 230px;
+    margin-bottom: 10px;
+}
+
+.login{
+position: relative;
+/* background-color: aqua; */
+}
+
+.login__wrap{
+position: absolute;
+left: 15%;
+right: 15%;
+text-align: center;
+}
+    
+.login__wrap-form input{
+    border-top: none;
+    outline: none;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 40px;
+}
+
+
+.login__wrap-form i{
+    font-size: 30px;
+    position: absolute;
+    right: 30px;
+    line-height: 40px;
+
+}
+
+.remember-forgot{
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot input{
+    width: 30px;
+}
+
+.input-box input{
+    text-indent: 7px;
+    font-size: 25px;
 }

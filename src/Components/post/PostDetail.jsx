@@ -96,12 +96,6 @@ export default function PostDetail({post}) {
   return (
     <section id="timelinePost" className="timelinePost">
       <div className="h-100 border-bottom timelinePost__content timelinePost__hidden">
-        {/* <Link to={`/u/${post.user?.id}`} className="text-decoration-none">
-          <div className="timelinePost__content-header d-inline">
-            <img src={post.user?.profilePictureUrl} alt="" />
-            <span className="fw-bold ps-2">{post.user?.username}</span>
-          </div>
-        </Link> */}
         <div className="timelinePost__content-image">
           <img src={post.imageUrl} alt="" onDoubleClick={(e) => doubleClickToLike(e, post.id)} />
           <i className={`bx bxs-heart heart-icon-${post.id}`}></i>
@@ -110,7 +104,7 @@ export default function PostDetail({post}) {
           <div className="timelinePost__content-icons-left">
             {isLike ? <i className="bx bxs-heart" onClick={(e) => unlikePost(e, post.id)} style={{ cursor: 'pointer' }}></i> : <i className="bx bx-heart" onClick={(e) => likePost(e, post.id)} style={{ cursor: 'pointer' }}></i>}
             <i className="bx bx-message-rounded" data-bs-toggle="modal" data-bs-target={`#postModal${post.id}`}></i>
-            <i className="bx bx-share-alt" data-tooltip-id="tooltip-share" data-tooltip-content="Coming Soon!"></i>
+            {/* <i className="bx bx-share-alt" data-tooltip-id="tooltip-share" data-tooltip-content="Coming Soon!"></i> */}
           </div>
           <div className="timelinePost__content-icons-right">
             {post.user?.id === loggedUser.id ? (

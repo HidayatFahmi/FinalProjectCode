@@ -13,3 +13,8 @@ height: auto;;
     width: 1200px;
     z-index: 999;
 }
+
+.side_wrap img{
+width: 350px;
+height: 360px;
+}

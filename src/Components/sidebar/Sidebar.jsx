@@ -1,8 +1,10 @@
 import { useContext, useEffect, useState } from 'react'
-import { GlobalContext } from '../config/GlobalState'
+import { GlobalContext } from '../../config/GlobalState'
 import { Link } from 'react-router-dom'
-import logApi from '../api/logApi'
+import logApi from '../../api/logApi'
 import "./Sidebar.css"
+
+
 export default function Sidebar() {
   const { loggedUser, token } = useContext(GlobalContext)
   const [following, setFollowing] = useState([])
