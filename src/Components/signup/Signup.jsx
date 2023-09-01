@@ -1,12 +1,12 @@
 import { useRef, useState } from 'react'
 import logApi from '../../api/logApi'
 import { compressAccurately } from 'image-conversion'
-import profile from "../../assets/images/profile.png"
+// import profile from "../../assets/images/profile.png"
 import "./Signup.css"
 
 
 export default function Signup() {
-  const defaultImageUrl = profile;
+  const defaultImageUrl = "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80";
   const [images, setImages] = useState()
   const [imagesPreview, setImagesPreview] = useState(defaultImageUrl)
 
