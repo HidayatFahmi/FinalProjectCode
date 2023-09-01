@@ -12,11 +12,6 @@
     align-items: center;
 }
 
-.link-style {
-    text-decoration: none; /* Menghilangkan garis bawah */
-    color: inherit; /* Mengambil warna teks dari warisan */
-  }
-  
 
 .navbar_wrap_content{
     position: absolute;
