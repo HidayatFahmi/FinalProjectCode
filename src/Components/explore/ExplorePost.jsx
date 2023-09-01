@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom'
 import "./ExplorePost.css"
-import { useContext, useEffect, useState } from 'react'
 import logApi from '../../api/logApi'
+import { useEffect,useState, useContext} from 'react'
 import { GlobalContext } from '../../config/GlobalState'
 import PropTypes from 'prop-types'
 
+
 export default function ExplorePost({post}) {
-  const [isLike, setIsLike] = useState(post.isLike)
-  const { loggedUser, token } = useContext(GlobalContext)
+  const [isLike, setIsLike] = useState(post.isLike);
+  const { token } = useContext(GlobalContext);
 
   async function likePost(e, id) {
     e.preventDefault()
@@ -36,20 +37,6 @@ export default function ExplorePost({post}) {
   }
 
 
-  async function doubleClickToLike(e, id) {
-    const heartIcon = document.querySelector(`.heart-icon-${id}`)
-    setTimeout(() => {
-      heartIcon.style.scale = '1.5'
-    }, 0)
-    setTimeout(() => {
-      heartIcon.style.scale = '1'
-    }, 200)
-    setTimeout(() => {
-      heartIcon.style.scale = '0'
-    }, 600)
-    if (!isLike) likePost(e, id)
-  }
-
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -62,29 +49,32 @@ export default function ExplorePost({post}) {
     hiddenElements.forEach((el) => observer.observe(el))
   }, [])
 
+
+
   return (
     <section id="timelinePost" className="timelinePost">
-      <div className="h-100 border-5 border-dark border-bottom py-3 timelinePost__content timelinePost__hidden mb-5">
+      <div className="h-100 border-5 border-dark border-bottom py-3 timelinePost__content timelinePost__hidden">
 
-        <div className="sidePost__content-image d-flex justify-content-center">
-          <img src={post.imageUrl} alt="" className="pt-3" onDoubleClick={(e) => doubleClickToLike(e, post.id)} />
-          <i className={`bx bxs-heart heart-icon-${post.id}`}></i>
+       <Link to={`/u/${post.user?.id}`} className="fw-bold text-decoration-none text-black fs-7">
+        <div className='explore-profile ms-3'>
+            <img src={post.user?.profilePictureUrl} alt="yuhu" />
+            <span className='ms-2 fw-bold'>{post.user?.username}</span>
+          </div>
+        </Link>{' '}
+
+        <div className="sidePost__content-image d-flex justify-content-center mb-3">
+          <img src={post.imageUrl} alt="" className="pt-3" />
         </div>
 
-        <div className="timelinePost__content-icons ms-3">
-          <div className="timelinePost__content-icons-left">
-            {isLike ? <i className="bx bxs-heart" onClick={(e) => unlikePost(e, post.id)} style={{ cursor: 'pointer' }}></i> : <i className="bx bx-heart" onClick={(e) => likePost(e, post.id)} style={{ cursor: 'pointer' }}></i>}
-          </div>
-          <div className="timelinePost__content-icons-right">
-            {post.user?.id === loggedUser.id ? (
-              <>
-                <i className="bx bx-edit-alt" data-bs-toggle="modal" data-bs-target={`#updatePostModal${post.id}`}></i>
-                {/* <i className="bx bx-trash" onClick={deletePost}></i> */}
-              </>
-            ) : null}
+        <div className="explore-like-comment ms-4 d-block d-xl-none">
+          <div className="fs-2">
+            {isLike ? <i className="bx bxs-heart me-3 text-danger" onClick={(e) => unlikePost(e, post.id)} style={{ cursor: 'pointer' }}></i> : <i className="bx bx-heart me-3" onClick={(e) => likePost(e, post.id)} style={{ cursor: 'pointer' }}></i>}
+            <i className="bx bx-message-rounded me-3" data-bs-toggle="modal" data-bs-target={`#postModal${post.id}`}></i>
+            <i className="bx bx-share-alt" data-tooltip-id="tooltip-share" data-tooltip-content="Coming Soon!"></i>
           </div>
         </div>
-        <div className="timelinePost__content-likes ms-3">
+
+        <div className="explore-like-count ms-4 d-block d-xl-none">
           <p className="fw-bold m-0 pb-2">
             <span>
               {post.totalLikes === 0 ? (
@@ -97,15 +87,12 @@ export default function ExplorePost({post}) {
                 </>
               )}
             </span>
-            {/* <span className="fw-light"> - {post.createdAt !== post.updatedAt ? 'Edited · ' : ''}{setTime(post.createdAt)}</span> */}
           </p>
         </div>
-        <div className="timelinePost__content-caption ms-3">
-          <Link to={`/u/${post.user?.id}`} className="fw-bold text-decoration-none text-black">
-            {post.user?.username}
-          </Link>{' '}
-          {post.caption}
 
+        <div className="timelinePost__content-caption ms-3">
+          <span className='fw-bold'>{post.user?.username}</span>
+          <span className='ms-3'>{post.caption}</span>
         </div>
       </div>
     </section>

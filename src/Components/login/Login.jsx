@@ -28,52 +28,42 @@ export default function Login() {
     }
   }
   return (
-    <section id="login" className="login d-flex flex-column justify-content-start align-items-center h-100">
+    <section id="login" className="login d-flex flex-column h-100">
       <div className="login__wrap">
-        <div className="login__wrap-title d-flex justify-content-center my-5">
+        <div className="login__wrap-title d-flex justify-content-center mt-4 mb-4">
           <img src={linePose} alt="" />
         </div>
         <form className="login__wrap-form" autoComplete="off">
-          <div className="input-box my-3">
+          <div className="input-box1 my-2">
             <span className="input-box__icon">
-              <i className="bx bxs-envelope"></i>
+              <i className="bx bxs-envelope "></i>
             </span>
             <input ref={loginEmailRef} type="email" autoComplete="new-password" required  placeholder='Email'/>
-            {/* <label htmlFor="inputEmailLabel">Email</label> */}
           </div>
-          <div className="input-box">
+          <div className="input-box1">
             <span className="input-box__icon">
               <i className="bx bxs-lock-alt"></i>
             </span>
             <input ref={loginPasswordRef} type="password" autoComplete="new-password" required placeholder='Password'/>
-            {/* <label htmlFor="inputPasswordLabel">Password</label> */}
           </div>
-          <div className="remember-forgot mb-4 my-3">
+          <div className="remember-forgot mb-4">
             <label className='d-flex align-items-center'>
               <input type="checkbox"className='me-3' />
-             <span className='fs-5'>Remember me</span>
+             <span className='fs-7 mb-3'>Remember me</span>
             </label>
-            <a href="#" className='fs-5'>Forgot Password?</a>
+            <a href="#" className='fs-7'>Forgot Password?</a>
           </div>
-          <button type="submit" className="btn btn-primary w-50 p-2 mt-3" onClick={loginUser}>
+          <button type="submit" className="btn btn-primary w-50 p-2" onClick={loginUser}>
             Login
           </button>
           <div className="register d-flex justify-content-center mt-4">
             <p>
-              <a href="#" className="register-link fs-4">
+              <a href="#" className="register-link fs-7">
                 Have an account ? Register
               </a>
             </p>
           </div>
         </form>
-      </div>
-      <div className="login__sample-user d-block d-sm-none">
-        <p className="fw-bold m-0">You can use this account.</p>
-        <span>
-          Email: chrispratt@gmail.com
-          <br />
-          Password: pass123
-        </span>
       </div>
     </section>
   )

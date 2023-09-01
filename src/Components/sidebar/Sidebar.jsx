@@ -18,28 +18,22 @@ export default function Sidebar() {
   }, [])
 
   return (
-    <section id="sidebar" className="sidebar ms">
+    <section id="sidebar" className="sidebar">
       <div className="container-fluid bg-light">
         <div className="row">
           <div className="sidebar__wrap d-flex flex-column ">
             <div className="sidebar__wrap_content">
-              {/* <div className="sidebar__wrap_content-title d-flex justify-content-center align-items-center">
-                <a className="text-primary d-none d-sm-inline text-decoration-none d-flex justify-content-center align-items-center" role="button">
-                  <span className="fs-3 fw-bold">Your Following</span>
-                </a>
-              </div> */}
               <hr className="text-primary d-none d-sm-block" />
               <ul className="sidebar__wrap_content-list nav nav-pills flex-column mt-2 mt-sm-0 scrollable-list" id="menu">
                 {following &&
                   following.map((following, i) => {
                     return (
-                      <li key={i} className="nav-item my-sm-2 my-3 mx-3 fs-6">
-                        <Link to={`/u/${following.id}`} className="nav-link text-primary text-center text-sm-start d-flex justify-content-between align-items-center p-0" aria-current="page">
-                          <div>
+                      <li key={i} className="nav-item my-sm-1 ">
+                        <Link to={`/u/${following.id}`} className="nav-link text-dark text-center text-sm-start d-flex justify-content-between align-items-center p-0" aria-current="page">
+                          <div className='me-xl-3 me-xxl-4'>
                             <div><img src={following.profilePictureUrl} alt="" /></div>
-                            <div className="ms-2 d-none d-sm-inline">{following.username}</div>
+                            <div>{following.username}</div>
                           </div>
-                          {/* <button className="border-0 fw-bold text-primary ms-4 bg-secondary">Profile</button> */}
                         </Link>
                       </li>
                     )

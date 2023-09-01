@@ -1,3 +1,54 @@
 .input-upload{
     font-size: 25px;
 }
+
+
+@media (max-width : 5000px){
+    .editprofile__wrap-title img{
+        width: 250px;
+    }
+    }
+
+@media (max-width : 1000px){
+    .editprofile__wrap-title img{
+        width: 200px;
+    }
+    }
+
+
+    .editprofile__wrap-form{
+        position: absolute;
+        left:10%;
+        right: 10%;
+        top: 5%;
+    }
+
+    .input-box{
+    margin-bottom: 65px;
+    }
+
+    .input-box input{
+        height: 45px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: flex;
+        border-top: none;
+        text-indent: 3%;
+        font-size: 18px;
+        
+    }
+
+    .input-box label{
+        font-size: 15px;
+        display: inline;
+        justify-content: center;
+        font-weight: bold;
+
+    }
+
+    .input-box i{
+        font-size: 20px;
+        position: absolute;
+        right: 8px;
+    }

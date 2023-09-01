@@ -1,6 +1,5 @@
-.user_form{
-    height: 650px;
-    /* background-color: aqua; */
+.user-form{
+    height: 550px;
     overflow: hidden;
     position: relative;
     border: 2px solid black;
@@ -8,7 +7,7 @@
 }
 
 
-.auth__form-login{
+.auth-form-login{
     position: absolute;
     left: 0%;
     right: 0%;
@@ -18,7 +17,7 @@
 
 }
 
-.auth__form-signup{
+.auth-form-signup{
     position: absolute;
     left: 0%;
     right: 0%;

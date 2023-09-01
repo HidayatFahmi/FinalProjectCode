@@ -3,12 +3,11 @@ import { useNavigate } from "react-router"
 import { GlobalContext } from "../../config/GlobalState"
 import { HashLink } from "react-router-hash-link"
 import logApi from "../../api/logApi"
-import "./Navbar.css"
+import "./NavbarSmall.css"
 import 'boxicons/css/boxicons.min.css'
-import logo from "../../assets/images/logo.png"
 
 
-export default function Navbar(){
+export default function NavbarSmall(){
 
     const { loggedUser, setIsLogin } = useContext(GlobalContext)
     const navigate = useNavigate()
@@ -33,41 +32,38 @@ export default function Navbar(){
         <div className="navbar position-fixed">
             <div className="row ">
                 <div className="col-12">
-                    <div className="navbar_wrap_content">
-                        <div className="navbar-logo ms-3 d-none d-xxl-inline">
-                            <img src={logo} alt="" />
-                        </div>
-                        <hr className="text-primary"/>
-                        <ul className="navbar_wrap_content_list" id="menu">
-                            <HashLink to={'/#'} className="nav-link mt-2 ">
+                    <div className="navbar_wrap_content2 ms-4 bg-white">
+    
+                        <ul className="navbar_wrap_content_list2 d-flex" id="menu">
+                            <HashLink to={'/#'} className="nav-link">
                                 <li className="nav-items">
                                     <i className="bx bx-home"></i>
-                                    <span className="ms-1 d-xxl-inline d-none d-lg-block">Home</span>
+                                    <span className="ms-1 d-xxl-inline d-none">Home</span>
                                 </li>
                             </HashLink>
                             <HashLink to={`/u/${loggedUser.id}#`} className="nav-link">
                                 <li className="nav-items">
                                     <i className="bx bx-user"></i>
-                                    <span className="ms-1 d-xxl-inline d-none d-lg-block">Profile</span>
+                                    <span className="ms-1 d-xxl-inline d-none">Profile</span>
                                 </li>
                             </HashLink>
                             <HashLink to={`/editprofile#`}>
                                 <li className="nav-items">
                                     <i className="bx bx-edit"></i>
-                                    <span className="ms-1 d-xxl-inline d-none d-lg-block">Edit Profile</span>
+                                    <span className="ms-1 d-xxl-block d-none">Edit Profile</span>
                                 </li>
                             </HashLink>
                             <li className="nav-items">
                                 <div className="nav-link d-flex align-items-center" aria-current="page" data-bs-toggle="modal" data-bs-target="#createPostModal">
                                     <i className="bx bx-plus-circle"></i>
-                                    <span className="ms-1 d-xxl-inline d-none d-lg-block">Post</span>
+                                    <span className="ms-1 d-xxl-inline d-none">Post</span>
                                 </div>
                             </li>
                             <li>
-                            <i className="bx bx-log-out d-inline d-xxl-none d-lg-none" onClick={logoutUser}></i>
+                            <i className="bx bx-log-out d-inline d-xxl-none" onClick={logoutUser}></i>
                             </li>
-                            <li className="nav-items text-center mt-5">
-                                <button className="btn btn-primary fs-6 w-100 rounded shadow d-none d-xxl-block d-lg-block" onClick={logoutUser}>
+                            <li className="nav-items text-center">
+                                <button className="btn btn-primary fs-6 w-100 rounded shadow d-none d-xxl-inline" onClick={logoutUser}>
                                     Logout
                                 </button>
                             </li>

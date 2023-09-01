@@ -9,8 +9,8 @@ export default function Auth() {
   useEffect(() => {
     const loginButton = document.querySelector('.login-link')
     const signupButton = document.querySelector('.register-link')
-    const formLogin = document.getElementById('auth__form-login')
-    const formSignup = document.getElementById('auth__form-signup')
+    const formLogin = document.getElementById('auth-form-login')
+    const formSignup = document.getElementById('auth-form-signup')
 
     signupButton.addEventListener('click', (e) => {
       e.preventDefault()
@@ -32,13 +32,13 @@ export default function Auth() {
 
   return (
     <section id="auth" className="auth min-vh-100 d-flex flex-column justify-content-center align-items-center">
-      <div className="container user_form col-4">
+      <div className="container user-form col-sm-8 col-md-6 col-xl-4">
         <div className="row justify-content-center align-items-center">
-          <div className="col-sm-10 col-md-8 col-lg-6 col-xl-12 auth__form rounded shadow">
-            <div className="auth__form-login" id="auth__form-login">
+          <div className="col-sm-10">
+            <div className="auth-form-login" id="auth-form-login">
               <Login />
             </div>
-            <div className="auth__form-signup overflow-auto" id="auth__form-signup">
+            <div className="auth-form-signup overflow-auto" id="auth-form-signup">
               <SignUp />
             </div>
           </div>

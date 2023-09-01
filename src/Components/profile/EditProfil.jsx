@@ -64,66 +64,74 @@ export default function EditProfile() {
   }
 
   return (
-    <section id="editprofile" className="editprofile min-vh-100 mb-5 mb-sm-0 d-flex">
-      <div className="editprofile__wrap">
-        <div className="editprofile__wrap-title d-flex flex-column justify-content-center align-items-center">
-          <p className="text-primary fw-bold fs-2 m-0">Edit Profile</p>
-          <img src={imagesPreview} alt="" />
-          <div className="input-upload">
-            <label htmlFor="chooseImage" className="form-label">
+      <div className="container-fluid editprofile__wrap min-vh-100 d-flex" id="editprofile">
+   
+        <div className="row container-fluid d-block d-lg-flex">
+        <div className="col-12 col-lg-5 position-relative">
+          <div className="editprofile__wrap-title text-center">
+          <p className="text-primary fw-bold fs-2 my-3">Edit Profile</p>
+            <img src={imagesPreview} alt="" />
+            <div className="input-upload col-8 col-md-6 col-lg-10 m-auto">
+              <label htmlFor="chooseImage" className="form-label">
               <i className="bx bxs-cloud-upload"></i> Choose Image
-            </label>
-            <input id="chooseImage" type="file" accept="image/*" onChange={(e) => handleImages(e)} className="form-control" required />
+              </label>
+              <input id="chooseImage" type="file" accept="image/*" onChange={(e) => handleImages(e)} className="form-control" required />
+            </div>
+          </div>
+          </div>
+          
+          <div className="col-12 col-lg-5 d-flex justify-content-center align-items-center position-relative">
+              <form className="editprofile__wrap-form">
+                <div className="input-box">
+                  <label>Name</label>
+                  <span className="input-box__icon">
+                  <i className="bx bxs-id-card"></i>
+                  </span>
+                  <input ref={loggedNameRef} defaultValue={loggedUser.name} type="text" autoComplete="new-password" required />
+                </div>
+                <div className="input-box">
+                  <label>Username</label>
+                  <span className="input-box__icon">
+                  <i className="bx bxs-user"></i>
+                  </span>
+                  <input ref={loggedUsernameRef} defaultValue={loggedUser.username} type="text" autoComplete="new-password" required />
+                </div>
+                <div className="input-box">
+                  <label>Email</label>
+                  <span className="input-box__icon">
+                  <i className="bx bxs-envelope"></i>
+                  </span>
+                  <input ref={loggedEmailRef} defaultValue={loggedUser.email} type="email" autoComplete="new-password" required />
+                </div>
+                  <div className="input-box">
+                  <label>Phone Number</label>
+                  <span className="input-box__icon">
+                  <i className="bx bxs-phone"></i>
+                  </span>
+                  <input ref={loggedPhoneNumberRef} defaultValue={loggedUser.phoneNumber} type="number" autoComplete="new-password" required />
+                </div>
+                <div className="input-box">
+                  <label>Bio</label>
+                  <span className="input-box__icon">
+                  <i className="bx bxs-notepad"></i>
+                  </span>
+                  <input ref={loggedBioRef} defaultValue={loggedUser.bio} type="text" autoComplete="new-password" required />
+                </div>
+                <div className="input-box">
+                  <label>Website</label>
+                  <span className="input-box__icon">
+                  <i className="bx bx-globe"></i>
+                  </span>
+                  <input ref={loggedWebsiteRef} defaultValue={loggedUser.website} type="text" autoComplete="new-password" required />
+                </div>
+               <div className='text-center'>
+                <button type="submit" className="btn btn-primary w-75 mt-5" onClick={(e) => editProfile(e)}>
+                  Submit
+                  </button>
+               </div>
+              </form>
           </div>
         </div>
-        <form className="editprofile__wrap-form">
-          <div className="input-box">
-            <span className="input-box__icon">
-              <i className="bx bxs-id-card"></i>
-            </span>
-            <input ref={loggedNameRef} defaultValue={loggedUser.name} type="text" autoComplete="new-password" required />
-            <label>Name</label>
-          </div>
-          <div className="input-box">
-            <span className="input-box__icon">
-              <i className="bx bxs-user"></i>
-            </span>
-            <input ref={loggedUsernameRef} defaultValue={loggedUser.username} type="text" autoComplete="new-password" required />
-            <label>Username</label>
-          </div>
-          <div className="input-box">
-            <span className="input-box__icon">
-              <i className="bx bxs-envelope"></i>
-            </span>
-            <input ref={loggedEmailRef} defaultValue={loggedUser.email} type="email" autoComplete="new-password" required />
-            <label>Email</label>
-          </div>
-          <div className="input-box">
-            <span className="input-box__icon">
-              <i className="bx bxs-phone"></i>
-            </span>
-            <input ref={loggedPhoneNumberRef} defaultValue={loggedUser.phoneNumber} type="number" autoComplete="new-password" required />
-            <label>Phone Number</label>
-          </div>
-          <div className="input-box">
-            <span className="input-box__icon">
-              <i className="bx bxs-notepad"></i>
-            </span>
-            <input ref={loggedBioRef} defaultValue={loggedUser.bio} type="text" autoComplete="new-password" required />
-            <label>Bio</label>
-          </div>
-          <div className="input-box">
-            <span className="input-box__icon">
-              <i className="bx bx-globe"></i>
-            </span>
-            <input ref={loggedWebsiteRef} defaultValue={loggedUser.website} type="text" autoComplete="new-password" required />
-            <label>Website</label>
-          </div>
-          <button type="submit" className="btn btn-primary w-100 p-2" onClick={(e) => editProfile(e)}>
-            Submit
-          </button>
-        </form>
       </div>
-    </section>
   )
 }

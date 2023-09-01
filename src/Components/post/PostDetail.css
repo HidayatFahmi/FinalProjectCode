@@ -1,5 +1,29 @@
+.timelinePost{
+    position: relative;
+}
+
 .timelinePost__content-image img{
-    width: 1200px;
-    height: 720px;
+    max-width: 900px;
+    max-height: 1600px;
+
+    width: 740px;
+    height: auto;
     
+}
+
+@media (max-width :1500px){
+    .timelinePost__content-image img{
+    
+        width: 690px;
+        height: auto;
+        
+    }
+}
+
+@media (max-width :1280px){
+    .timelinePost__content-image img{
+        width: 600px;
+        height: auto;
+        
+    }
 }

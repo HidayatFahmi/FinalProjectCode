@@ -21,7 +21,6 @@ export default function App() {
         <Route path="/" element={<Dashboard/>}/>
         <Route path="/u/:id" element={<Profile/>}/>
         <Route path="/editprofile" element={<EditProfile/>}/>
-
        </Route>
       )
       :

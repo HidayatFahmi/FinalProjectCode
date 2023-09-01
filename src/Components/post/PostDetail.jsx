@@ -3,9 +3,6 @@ import './PostDetail.css'
 import { useContext, useEffect, useState } from 'react'
 import logApi from '../../api/logApi'
 import { GlobalContext } from '../../config/GlobalState'
-// import setTime from '../../config/setTime'
-// import PostModal from '../modal/PostModal'
-// import { Tooltip } from 'react-tooltip'
 import PropTypes from 'prop-types'
 
 export default function PostDetail({post}) {
@@ -39,19 +36,6 @@ export default function PostDetail({post}) {
     setIsLike(false)
   }
 
-  // async function deletePost(e) {
-  //   try {
-  //     e.preventDefault()
-  //     let text = 'Are you sure to delete this post?'
-  //     if (confirm(text) === true) {
-  //       const postId = post.id
-  //       const deletePost = await logApi.deletePost(postId, token)
-  //       window.location.reload()
-  //     }
-  //   } catch (err) {
-  //     alert(err.response.data.message)
-  //   }
-  // }
 
   async function createComment(e) {
     e.preventDefault()
@@ -95,21 +79,20 @@ export default function PostDetail({post}) {
 
   return (
     <section id="timelinePost" className="timelinePost">
-      <div className="h-100 border-bottom timelinePost__content timelinePost__hidden">
+      <div className="h-100 border-bottom timelinePost__content timelinePost__hidden mt-3">
         <div className="timelinePost__content-image">
-          <img src={post.imageUrl} alt="" onDoubleClick={(e) => doubleClickToLike(e, post.id)} />
-          <i className={`bx bxs-heart heart-icon-${post.id}`}></i>
+          <img className="mb-3" src={post.imageUrl} alt="" onDoubleClick={(e) => doubleClickToLike(e, post.id)} />
         </div>
         <div className="timelinePost__content-icons">
-          <div className="timelinePost__content-icons-left">
-            {isLike ? <i className="bx bxs-heart" onClick={(e) => unlikePost(e, post.id)} style={{ cursor: 'pointer' }}></i> : <i className="bx bx-heart" onClick={(e) => likePost(e, post.id)} style={{ cursor: 'pointer' }}></i>}
-            <i className="bx bx-message-rounded" data-bs-toggle="modal" data-bs-target={`#postModal${post.id}`}></i>
-            {/* <i className="bx bx-share-alt" data-tooltip-id="tooltip-share" data-tooltip-content="Coming Soon!"></i> */}
+          <div className="timelinePost__content-icons-left fs-2">
+            {isLike ? <i className="bx bxs-heart me-3 text-danger" onClick={(e) => unlikePost(e, post.id)} style={{ cursor: 'pointer' }}></i> : <i className="bx bx-heart me-3" onClick={(e) => likePost(e, post.id)} style={{ cursor: 'pointer' }}></i>}
+            <i className="bx bx-message-rounded me-3" data-bs-toggle="modal" data-bs-target={`#postModal${post.id}`}></i>
+            <i className="bx bx-share-alt" data-tooltip-id="tooltip-share" data-tooltip-content="Coming Soon!"></i>
           </div>
           <div className="timelinePost__content-icons-right">
             {post.user?.id === loggedUser.id ? (
               <>
-                <i className="bx bx-edit-alt" data-bs-toggle="modal" data-bs-target={`#updatePostModal${post.id}`}></i>
+                {/* <i className="bx bx-edit-alt" data-bs-toggle="modal" data-bs-target={`#updatePostModal${post.id}`}></i> */}
                 {/* <i className="bx bx-trash" onClick={deletePost}></i> */}
               </>
             ) : null}
@@ -128,10 +111,9 @@ export default function PostDetail({post}) {
                 </>
               )}
             </span>
-            {/* <span className="fw-light"> - {post.createdAt !== post.updatedAt ? 'Edited · ' : ''}{setTime(post.createdAt)}</span> */}
           </p>
         </div>
-        <div className="timelinePost__content-caption">
+        <div className="timelinePost__content-caption mb-2">
           <Link to={`/u/${post.user?.id}`} className="fw-bold text-decoration-none text-black">
             {post.user?.username}
           </Link>{' '}
@@ -140,12 +122,10 @@ export default function PostDetail({post}) {
         <div className="timelinePost__content-comment">
           <form>
             <input type="text" placeholder="Add a comment..." value={comment} onChange={(e) => setComment(e.target.value)} />
-            {comment && <button onClick={createComment}>Post</button>}
+            {comment && <button className="btn btn-primary" onClick={createComment}>Post</button>}
           </form>
         </div>
       </div>
-      {/* <PostModal post={post} /> */}
-      {/* <Tooltip id='tooltip-share' place='right' className='tooltip-share' openOnClick/> */}
     </section>
   )
 }

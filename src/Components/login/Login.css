@@ -1,48 +1,49 @@
 
 .login__wrap-title img{
-    width: 230px;
+    width: 160px;
     margin-bottom: 10px;
 }
 
 .login{
 position: relative;
-/* background-color: aqua; */
 }
 
 .login__wrap{
 position: absolute;
-left: 15%;
-right: 15%;
+left: 7%;
+right: 7%;
 text-align: center;
 }
     
 .login__wrap-form input{
     border-top: none;
     outline: none;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 100%;
-    height: 40px;
 }
 
 
 .login__wrap-form i{
-    font-size: 30px;
+    font-size: 25px;
     position: absolute;
     right: 30px;
-    line-height: 40px;
+    line-height: 25px;
 
 }
 
 .remember-forgot{
     display: flex;
     justify-content: space-between;
+    margin: 0px 30px;
 }
 
 .remember-forgot input{
     width: 30px;
 }
 
-.input-box input{
+
+.input-box1 input{
     text-indent: 7px;
-    font-size: 25px;
+    font-size: 18px;
+    height:40px;
 }

@@ -9,7 +9,7 @@ import { GlobalContext } from '../../config/GlobalState'
 export default function Dashboard() {
   const [explorePost, setExplorerPost] = useState([])
   // const [followingPost, setFollowingPost] = useState([])
-  const [size, setSize] = useState(5)
+  const [size] = useState(5)
   const [isLoading, setIsLoading] = useState(true)
   const { token } = useContext(GlobalContext)
   const [selectedPost, setSelectedPost] = useState();
@@ -33,22 +33,37 @@ export default function Dashboard() {
   }, [size])
 
   return (
-    // <section id="dashboard_wrap" className="dashboard mb-sm-0">
       <div className="container-fluid dashboard_side_wrap" id="dashboard-wrap">
         <div className="row">
-          <div className="col-8 dash_wrap bg-light d-block">
-          
-              <div className="row-12 dashSide_wrap_content">
+        {isLoading ? 
+        (
+            <>
+              <div className="d-flex justify-content-center">
+                <div className="spinner-border text-primary m-5" role="status">
+                  <span className="visually-hidden">Loading...</span>
+                </div>
+              </div>
+            </>
+        ):
+          <div className="col-xl-8 dash_wrap bg-light d-block">
+              <div className="row dashSide_wrap_content d-none d-xl-block">
                 <Sidebar/>
               </div>
 
-              <div className="row-12 dash_wrap_content position-fixed">
-                {!selectedPost? (null):<PostDetail post={selectedPost}/>}
+              <div className="row dash_wrap_content d-flex justify-content-center d-none d-xl-inline">
+                {!selectedPost? 
+                <div>
+                {explorePost && explorePost.length > 0 && (
+                  <span key={0}><PostDetail post={explorePost[0]} /></span>
+                )}
+              </div>
+                :<PostDetail post={selectedPost}/>}
               </div>    
           </div>
+        }
 
-         <div className="container-fluid col-3 bg-dark  ms-3">
-          <div className="bg-light side_wrap d-block" >
+         <div className="container-fluid col-11 col-sm-10 col-xl-3 bg-dark ms-3 side_wrap position-relative">
+          <div className="bg-light  d-block" >
             {explorePost &&
               explorePost.map((post, i)=> {
                 return <span key={i} onClick={() => showPostDetail(post)}> <ExplorePost post={post}/></span>

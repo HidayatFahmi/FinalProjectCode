@@ -1,5 +1,12 @@
+
 .sidePost__content-image img{
-    width: 350px;
-    height: 360px;
-    
+    width: 85%;
+    height: auto;
+}
+
+
+.explore-profile img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
 }

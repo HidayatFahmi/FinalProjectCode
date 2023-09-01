@@ -4,8 +4,8 @@ import { useContext, useEffect, useState } from 'react'
 import logApi from '../../api/logApi'
 import { GlobalContext } from '../../config/GlobalState'
 import getLoggedUser from '../../config/getLoggedUser'
-// import FollowModal from '../modal/FollowModal'
-// import PostModal from '../modal/PostModal'
+import PostModal from '../modal/postModal'
+import FollowModal from '../modal/FollowModal'
 // import getLoggedUser from '../../config/getLoggedUser'
 
 export default function Profile() {
@@ -78,29 +78,29 @@ export default function Profile() {
           <div className="profile__header my-4">
             <div className="container-fluid">
               <div className="row">
-                <div className="col-3 profile__header-image ms-5">
+                <div className="col-12 col-md-4 profile__header-image d-flex  align-items-center justify-content-center position-relative">
                   <img src={userById.profilePictureUrl} alt="" />
                 </div>
-                <div className="col-8 profile__header-caption">
+                <div className="col-12 col-md-7 profile__header-caption">
                   <div className="profile__header-caption-1">
-                    <span className='fs-3'>{userById.username}</span>
+                    <span className='fs-5 fw-bold text-primary'>{userById.username}</span>
                     {userById.id !== loggedUser.id ? (
                       !isFollow ? (
                         <>
-                          <button className="bt1 ms-4 button-solid" onClick={followUser}>
+                          <button className="bt1 ms-4 button-solid fs-6  btn btn-warning" onClick={followUser}>
                             Follow
                           </button>
                         </>
                       ) : (
                         <>
-                          <button className="bt2 ms-4 button-empty" onClick={unfollowUser}>
+                          <button className="bt2 ms-4 button-empty btn btn-primary fs-6" onClick={unfollowUser}>
                             Unfollow
                           </button>
                         </>
                       )
                     ) : null}
                   </div>
-                  <div className="profile__header-caption-2 d-flex gap-3 mt-3 gap-sm-5">
+                  <div className="profile__header-caption-2 d-flex gap-2 mt-2 gap-sm-4 fs-6">
                     <span className="text-center">
                       <span className="fw-bold">{userById.totalPosts}</span> posts
                     </span>
@@ -114,43 +114,32 @@ export default function Profile() {
                   <div className="profile__header-caption-3 mt-3 d-none d-sm-block">
                     {userById.name && <p className="fw-bold">{userById.name}</p>}
                     {userById.bio && <p>{userById.bio}</p>}
-                    {userById.website && (
-                      <a href={userById.website} target="_blank">
-                        {userById.website}
-                      </a>
-                    )}
                   </div>
                 </div>
                 <div className="col-12 profile__header-mobile d-block d-sm-none mt-2">
-                  {/* {userById.name && <p className="fw-bold m-0">{userById.name}</p>}
-                  {userById.bio && <p className="m-0">{userById.bio}</p>}
-                  {userById.website && (
-                    <a href={userById.website} target="_blank">
-                      {userById.website}
-                    </a>
-                  )} */}
                 </div>
               </div>
             </div>
           </div>
+          <hr />
 
           {/* Profile Posts */}
           <div className="profile__posts">
             <div className="container">
-              <div className="row row-cols-3">
+              <div className="row">
                 {userById.posts &&
                   userById.posts.map((post, i) => {
                     return (
-                      <div key={i} className="col profile__posts-post mb-4">
+                      <div key={i} className="col-12 col-md-6 col-lg-4 col-xl-3 profile__posts-post mx-0 ">
                         <img src={post.imageUrl} alt="" data-bs-toggle="modal" data-bs-target={`#postModal${post.id}`} />
-                        {/* <PostModal post={post} /> */}
+                        <PostModal post={post} />
                       </div>
                     )
                   })}
               </div>
             </div>
           </div>
-          {/* <FollowModal user={userById} /> */}
+          <FollowModal user={userById} />
         </section>
       )}
     </>

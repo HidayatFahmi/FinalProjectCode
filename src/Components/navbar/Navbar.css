@@ -1,24 +1,47 @@
 .navbar_wrap_content_list{
     list-style-type: none;
-}
-
-.navbar_wrap_content img{
-    height: 160px;
-    width: 280px;
-    padding: 10px 10px;
-}
-
-.navbar_wrap_content_list{
-font-size: 25px;
+    width: 150%;
 }
 
 .navbar_wrap_content_list li{
-    font-size: 25px;
-    margin: 35px 0;
+    font-size: 18px;
+    margin: 20px 0;
     color: rgba(0, 107, 247, 0.8);
     font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.link-style {
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: inherit; /* Mengambil warna teks dari warisan */
+  }
+  
+
+.navbar_wrap_content{
+    position: absolute;
+
+}
+
+.navbar_wrap_content img{
+    width: 120%;
+    padding: 10px 10px;
 }
 
 .navbar_wrap_content i{
-    font-size: 45px;
+    font-size: 180%;
+}
+
+
+
+@media (max-width : 2000px){
+    .navbar-box{
+        border-right: 4px solid black;
+    }
+}
+
+@media (max-width : 1198px){
+    .navbar-box{
+        border: none;
+    }
 }

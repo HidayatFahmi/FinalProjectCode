@@ -1,0 +1,23 @@
+.follow{
+    width: 40%;
+    height: 40%;
+    overflow: hidden
+}
+
+.follows{
+    position: relative;
+}
+
+.follow img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.button-follow{
+    position: absolute;
+    top: 15px;
+    right: 0;
+}

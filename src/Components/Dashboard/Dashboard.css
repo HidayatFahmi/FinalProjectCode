@@ -1,20 +1,28 @@
-.explore_content img{
-width: 100%;
-height: auto;;
+.dashboard_side_wrap{
+    position: relative;
 }
 
 .dash_wrap_content {
-    position: relative;
-    top: 220px;
+    position: fixed;
+    top: 120px;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
+
 
 .dashSide_wrap_content{
     position: fixed;
-    width: 1200px;
+    width: 50%;
+    z-index: 3;
+}
+
+.side_wrap{
+    position: relative;
     z-index: 999;
 }
 
-.side_wrap img{
-width: 350px;
-height: 360px;
+
+.dash_wrap{
+    position: relative;
 }

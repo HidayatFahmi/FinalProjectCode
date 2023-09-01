@@ -1,0 +1,26 @@
+.post__content-header img, .post__content-comment img{
+width: 50px;
+height: 50px;
+border-radius: 50%;
+border: none;
+}
+
+.post__content-image{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.post__content-image img{
+width: 60%;
+height: auto;
+border: none;
+}
+
+.post__content-caption img{
+    width: 60px;
+    height: 60px;
+    border: none;
+}
+
