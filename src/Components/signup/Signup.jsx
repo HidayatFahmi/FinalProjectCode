@@ -1,7 +1,6 @@
 import { useRef, useState } from 'react'
 import logApi from '../../api/logApi'
 import { compressAccurately } from 'image-conversion'
-// import profile from "../../assets/images/profile.png"
 import "./Signup.css"
 
 
