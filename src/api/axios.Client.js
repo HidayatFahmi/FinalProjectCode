@@ -1,26 +1,28 @@
-import axios from 'axios'
+import axios from 'axios';
 
 const axiosClient = axios.create({
-  baseURL: 'https://photo-sharing-api-bootcamp.do.dibimbing.id/api/v1/',
+  baseURL: import.meta.env.VITE_REACT_APP_API_URL,
   headers: {
     'Content-Type': 'application/json',
-    apiKey: 'c7b411cc-0e7c-4ad1-aa3f-822b00e7734b',
+    apiKey: import.meta.env.VITE_REACT_APP_API_KEY,
   },
-})
+});
 
-axiosClient.interceptors.request.use(async (config) => config)
+console.log(import.meta.env.VITE_REACT_APP_API_URL);
+console.log(import.meta.env.VITE_REACT_APP_API_KEY);
+
+axiosClient.interceptors.request.use(async (config) => config);
 
 axiosClient.interceptors.response.use(
   (response) => {
     if (response && response.data) {
-      return response.data
+      return response.data;
     }
-
-    return response
+    return response;
   },
   (error) => {
-    throw error
+    throw error;
   }
-)
+);
 
-export default axiosClient
+export default axiosClient;
