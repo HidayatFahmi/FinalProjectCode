@@ -86,7 +86,7 @@ export default function Dashboard() {
           </div>
         }
 
-         <div className="container-fluid col-12 col-sm-10 col-xl-3 bg-dark ms-0 ms-sm-3 side_wrap position-relative mb-5">
+         <div className="container-fluid col-12 col-sm-10 col-xl-3 bg-dark ms-0 ms-sm-3 side_wrap position-relative">
           <div className="bg-light d-block" >
             {explorePost &&
               explorePost.map((post, i)=> {
