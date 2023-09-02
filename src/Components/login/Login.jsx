@@ -29,24 +29,24 @@ export default function Login() {
   }
   return (
     <section id="login" className="login d-flex flex-column h-100">
-      <div className="login__wrap">
-        <div className="login__wrap-title d-flex justify-content-center mt-4 mb-4">
+      <div className="loginWrap">
+        <div className="loginWrapTitle d-flex justify-content-center mt-4 mb-4">
           <img src={linePose} alt="" />
         </div>
-        <form className="login__wrap-form" autoComplete="off">
-          <div className="input-box1 my-2">
-            <span className="input-box__icon">
+        <form className="loginWrapForm" autoComplete="off">
+          <div className="inputBox1 my-2">
+            <span className="inputBoxIcon">
               <i className="bx bxs-envelope "></i>
             </span>
             <input ref={loginEmailRef} type="email" autoComplete="new-password" required  placeholder='Email'/>
           </div>
-          <div className="input-box1">
-            <span className="input-box__icon">
+          <div className="inputBox1">
+            <span className="inputBoxIcon">
               <i className="bx bxs-lock-alt"></i>
             </span>
             <input ref={loginPasswordRef} type="password" autoComplete="new-password" required placeholder='Password'/>
           </div>
-          <div className="remember-forgot mb-4">
+          <div className="rememberForgot mb-4">
             <label className='d-flex align-items-center'>
               <input type="checkbox"className='me-3' />
              <span className='fs-7 mb-3'>Remember me</span>
@@ -58,7 +58,7 @@ export default function Login() {
           </button>
           <div className="register d-flex justify-content-center mt-4">
             <p>
-              <a href="#" className="register-link fs-7">
+              <a href="#" className="registerLink fs-7">
                 Have an account ? Register
               </a>
             </p>

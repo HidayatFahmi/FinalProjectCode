@@ -1,9 +1,9 @@
-.navbar_wrap_content_list{
+.navbarWrapContentList{
     list-style-type: none;
     width: 150%;
 }
 
-.navbar_wrap_content_list li{
+.navbarWrapContentList li{
     font-size: 18px;
     margin: 20px 0;
     color: rgba(0, 107, 247, 0.8);
@@ -13,30 +13,16 @@
 }
 
 
-.navbar_wrap_content{
+.navbarWrapContent{
     position: absolute;
-
 }
 
-.navbar_wrap_content img{
+.navbarWrapContent img{
     width: 120%;
     padding: 10px 10px;
 }
 
-.navbar_wrap_content i{
+.navbarWrapContent i{
     font-size: 180%;
 }
 
-
-
-@media (max-width : 2000px){
-    .navbar-box{
-        border-right: 4px solid black;
-    }
-}
-
-@media (max-width : 1198px){
-    .navbar-box{
-        border: none;
-    }
-}

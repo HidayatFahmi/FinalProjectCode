@@ -17,7 +17,7 @@ export default function Home(){
             <div className="container-fluid home-page bg-dark">
                   <div className="container-fluid col-12">
                     <div className="row">
-                        <div className="navbar-box d-none d-sm-block col-2 bg-light">
+                        <div className="navbarBox d-none d-sm-block col-2 bg-light">
                             <Navbar/>
                         </div>
                         <div className="col-12 col-sm-10 outlet-page bg-light d-flex">

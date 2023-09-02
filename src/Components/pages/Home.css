@@ -1,3 +1,15 @@
 .navbarSmall{
     z-index: 99999;
 }
+
+@media (max-width : 2000px){
+    .navbarBox{
+        border-right: 4px solid black;
+    }
+}
+
+@media (max-width : 1200px){
+    .navbarBox{
+        border: none;
+    }
+}

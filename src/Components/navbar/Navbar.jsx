@@ -31,14 +31,14 @@ export default function Navbar(){
 
     return(
         <div className="navbar position-fixed">
-            <div className="row ">
-                <div className="col-12">
-                    <div className="navbar_wrap_content">
-                        <div className="navbar-logo ms-3 d-none d-xxl-inline">
+            <div className="row">
+                <div className="col-12 navbar-box">
+                    <div className="navbarWrapContent">
+                        <div className="navbar-logo ms-3 d-none d-xxl-inline ms-5">
                             <img src={logo} alt="" />
                         </div>
                         <hr className="text-primary"/>
-                        <ul className="navbar_wrap_content_list" id="menu">
+                        <ul className="navbarWrapContentList" id="menu">
                             <HashLink to={'/#'} className="nav-link mt-2 ">
                                 <li className="nav-items">
                                     <i className="bx bx-home"></i>
@@ -67,7 +67,7 @@ export default function Navbar(){
                             <i className="bx bx-log-out d-inline d-xxl-none d-lg-none" onClick={logoutUser}></i>
                             </li>
                             <li className="nav-items text-center mt-5">
-                                <button className="btn btn-primary fs-6 w-100 rounded shadow d-none d-xxl-block d-lg-block" onClick={logoutUser}>
+                                <button className="btn btn-primary fs-6 w-75 rounded shadow d-none d-xxl-block d-lg-block" onClick={logoutUser}>
                                     Logout
                                 </button>
                             </li>

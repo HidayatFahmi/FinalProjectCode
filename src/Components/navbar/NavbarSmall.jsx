@@ -32,9 +32,9 @@ export default function NavbarSmall(){
         <div className="navbar position-fixed">
             <div className="row ">
                 <div className="col-12">
-                    <div className="navbar_wrap_content2 ms-4 bg-white">
+                    <div className="navbarWrapContent2 ms-4 bg-light">
     
-                        <ul className="navbar_wrap_content_list2 d-flex" id="menu">
+                        <ul className="navbarWrapContentList2 d-flex" id="menu">
                             <HashLink to={'/#'} className="nav-link">
                                 <li className="nav-items">
                                     <i className="bx bx-home"></i>

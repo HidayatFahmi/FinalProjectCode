@@ -1,5 +1,5 @@
 
-.login__wrap-title img{
+.loginWrapTitle img{
     width: 160px;
     margin-bottom: 10px;
 }
@@ -8,14 +8,14 @@
 position: relative;
 }
 
-.login__wrap{
+.loginWrap{
 position: absolute;
 left: 7%;
 right: 7%;
 text-align: center;
 }
     
-.login__wrap-form input{
+.loginWrapForm input{
     border-top: none;
     outline: none;
     margin-bottom: 30px;
@@ -23,7 +23,7 @@ text-align: center;
 }
 
 
-.login__wrap-form i{
+.loginWrapForm i{
     font-size: 25px;
     position: absolute;
     right: 30px;
@@ -31,19 +31,19 @@ text-align: center;
 
 }
 
-.remember-forgot{
+.rememberForgot{
     display: flex;
     justify-content: space-between;
     margin: 0px 30px;
 }
 
-.remember-forgot input{
+.rememberForgot input{
     width: 30px;
 }
 
 
-.input-box1 input{
-    text-indent: 7px;
-    font-size: 18px;
-    height:40px;
+.inputBox1 input{
+    text-indent: 15px;
+    font-size: 20px;
+    height: 35px;
 }

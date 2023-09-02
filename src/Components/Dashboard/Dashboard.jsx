@@ -32,6 +32,30 @@ export default function Dashboard() {
     getExplorePost(50)
   }, [size])
 
+  
+    useEffect(() => {
+      function setBgColor() {
+        const container = document.querySelector('.side_wrap');
+  
+        if (window.matchMedia('(max-width: 576px)').matches) {
+          container.classList.remove('bg-dark');
+          container.classList.add('bg-light');
+        } else {
+          container.classList.remove('bg-light');
+          container.classList.add('bg-dark');
+        }
+      }
+  
+      setBgColor();
+      window.addEventListener('resize', setBgColor);
+  
+      return () => {
+        window.removeEventListener('resize', setBgColor);
+      };
+    }, []);
+  
+  
+
   return (
       <div className="container-fluid dashboard_side_wrap" id="dashboard-wrap">
         <div className="row">
@@ -62,8 +86,8 @@ export default function Dashboard() {
           </div>
         }
 
-         <div className="container-fluid col-11 col-sm-10 col-xl-3 bg-dark ms-3 side_wrap position-relative">
-          <div className="bg-light  d-block" >
+         <div className="container-fluid col-12 col-sm-10 col-xl-3 bg-dark ms-0 ms-sm-3 side_wrap position-relative">
+          <div className="bg-light d-block" >
             {explorePost &&
               explorePost.map((post, i)=> {
                 return <span key={i} onClick={() => showPostDetail(post)}> <ExplorePost post={post}/></span>
