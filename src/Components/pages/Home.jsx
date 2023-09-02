@@ -22,13 +22,13 @@ export default function Home(){
                         </div>
                         <div className="col-12 col-sm-10 outlet-page bg-light d-flex">
                             <Outlet/>
-                        </div>  
+                        </div> 
                         <div>
                             <CreatePostModal/>
                         </div>
                     </div>   
                     <div className="row">
-                        <div className="col d-block d-sm-none position-fixed navbarSmall">
+                        <div className="col d-block d-sm-none navbarSmall">
                             <NavbarSmall/>
                         </div>
                     </div>

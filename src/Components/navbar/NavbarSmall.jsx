@@ -29,7 +29,7 @@ export default function NavbarSmall(){
     }
 
     return(
-        <div className="navbar position-fixed">
+        <div className="navbar">
             <div className="row ">
                 <div className="col-12">
                     <div className="navbarWrapContent2 ms-4 bg-light">

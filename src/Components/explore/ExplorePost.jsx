@@ -53,7 +53,7 @@ export default function ExplorePost({post}) {
 
   return (
     <section id="timelinePost" className="timelinePost">
-      <div className="h-100 border-5 border-dark border-bottom py-3 timelinePost__content timelinePost__hidden">
+      <div className="h-100 border-5 border-dark border-bottom py-3 timelinePost__content timelinePost__hidden mb-5">
 
        <Link to={`/u/${post.user?.id}`} className="fw-bold text-decoration-none text-black fs-7">
         <div className='explore-profile ms-3'>

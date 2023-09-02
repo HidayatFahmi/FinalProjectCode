@@ -52,3 +52,7 @@
         position: absolute;
         right: 8px;
     }
+
+    .editprofile__wrap{
+        height: 1000px;
+    }

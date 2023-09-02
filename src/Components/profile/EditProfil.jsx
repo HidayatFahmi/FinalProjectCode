@@ -64,10 +64,10 @@ export default function EditProfile() {
   }
 
   return (
-      <div className="container-fluid editprofile__wrap min-vh-100 d-flex" id="editprofile">
+      <div className="container-fluid editprofile__wrap d-flex" id="editprofile">
    
         <div className="row container-fluid d-block d-lg-flex">
-        <div className="col-12 col-lg-5 position-relative">
+        <div className="col-12 col-lg-5">
           <div className="editprofile__wrap-title text-center">
           <p className="text-primary fw-bold fs-2 my-3">Edit Profile</p>
             <img src={imagesPreview} alt="" />
