@@ -32,7 +32,7 @@ export default function Auth() {
 
   return (
     <section id="auth" className="auth min-vh-100 d-flex flex-column justify-content-center align-items-center">
-      <div className="container userForm col-sm-8 col-md-6 col-xl-4">
+      <div className="container userForm col-10 col-md-6 col-xl-4">
         <div className="row justify-content-center align-items-center">
           <div className="col-sm-10">
             <div className="authFormLogin" id="authFormLogin">
