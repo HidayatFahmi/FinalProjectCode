@@ -4,7 +4,7 @@ import { GlobalContext } from './config/GlobalState';
 import Auth from './Components/pages/Auth';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Home from './Components/pages/Home';
-import Profile from './Components/profile/profile';
+import Profile from './Components/profile/Profile';
 import EditProfile from './Components/profile/EditProfil';
 
 export default function App() {

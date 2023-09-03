@@ -41,11 +41,11 @@ export default function ExplorePost({post}) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('timelinePost__show')
+          entry.target.classList.add('timelinePostShow')
         }
       })
     })
-    const hiddenElements = document.querySelectorAll('.timelinePost__hidden')
+    const hiddenElements = document.querySelectorAll('.timelinePostHidden')
     hiddenElements.forEach((el) => observer.observe(el))
   }, [])
 
@@ -53,20 +53,20 @@ export default function ExplorePost({post}) {
 
   return (
     <section id="timelinePost" className="timelinePost">
-      <div className="h-100 border-5 border-dark border-bottom py-3 timelinePost__content timelinePost__hidden">
+      <div className="h-100 border-5 border-dark border-bottom py-3 timelinePostContent timelinePostHidden">
 
        <Link to={`/u/${post.user?.id}`} className="fw-bold text-decoration-none text-black fs-7">
-        <div className='explore-profile ms-3'>
+        <div className='exploreProfile ms-3'>
             <img src={post.user?.profilePictureUrl} alt="yuhu" />
             <span className='ms-2 fw-bold'>{post.user?.username}</span>
           </div>
         </Link>{' '}
 
-        <div className="sidePost__content-image d-flex justify-content-center mb-3">
+        <div className="sidePostContentImage d-flex justify-content-center mb-3">
           <img src={post.imageUrl} alt="" className="pt-3" />
         </div>
 
-        <div className="explore-like-comment ms-4 d-block d-xl-none">
+        <div className="exploreLikeComment ms-4 d-block d-xl-none">
           <div className="fs-2">
             {isLike ? <i className="bx bxs-heart me-3 text-danger" onClick={(e) => unlikePost(e, post.id)} style={{ cursor: 'pointer' }}></i> : <i className="bx bx-heart me-3" onClick={(e) => likePost(e, post.id)} style={{ cursor: 'pointer' }}></i>}
             <i className="bx bx-message-rounded me-3" data-bs-toggle="modal" data-bs-target={`#postModal${post.id}`}></i>
@@ -90,7 +90,7 @@ export default function ExplorePost({post}) {
           </p>
         </div>
 
-        <div className="timelinePost__content-caption ms-3">
+        <div className="timelinePostContentCaption ms-3">
           <span className='fw-bold'>{post.user?.username}</span>
           <span className='ms-3'>{post.caption}</span>
         </div>

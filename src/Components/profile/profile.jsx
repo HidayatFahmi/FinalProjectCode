@@ -75,14 +75,14 @@ export default function Profile() {
       ) : (
         <section id="profile" className="profile min-vh-100 bg-light">
           {/* Profile Header */}
-          <div className="profile__header my-4">
+          <div className="profile-header my-4">
             <div className="container-fluid">
               <div className="row">
-                <div className="col-12 col-md-4 profile__header-image d-flex  align-items-center justify-content-center position-relative">
+                <div className="col-12 col-md-4 profile-header-image d-flex  align-items-center justify-content-center position-relative">
                   <img src={userById.profilePictureUrl} alt="" />
                 </div>
-                <div className="col-12 col-md-7 profile__header-caption">
-                  <div className="profile__header-caption-1">
+                <div className="col-12 col-md-7 profile-header-caption">
+                  <div className="profile-header-caption-1">
                     <span className='fs-5 fw-bold text-primary'>{userById.username}</span>
                     {userById.id !== loggedUser.id ? (
                       !isFollow ? (
@@ -100,7 +100,7 @@ export default function Profile() {
                       )
                     ) : null}
                   </div>
-                  <div className="profile__header-caption-2 d-flex gap-2 mt-2 gap-sm-4 fs-6">
+                  <div className="profile-header-caption-2 d-flex gap-2 mt-2 gap-sm-4 fs-6">
                     <span className="text-center">
                       <span className="fw-bold">{userById.totalPosts}</span> posts
                     </span>
@@ -111,12 +111,12 @@ export default function Profile() {
                       <span className="fw-bold">{userById.totalFollowing}</span> following
                     </span>
                   </div>
-                  <div className="profile__header-caption-3 mt-3 d-none d-sm-block">
+                  <div className="profile-header-caption-3 mt-3 d-none d-sm-block">
                     {userById.name && <p className="fw-bold">{userById.name}</p>}
                     {userById.bio && <p>{userById.bio}</p>}
                   </div>
                 </div>
-                <div className="col-12 profile__header-mobile d-block d-sm-none mt-2">
+                <div className="col-12 profile-header-mobile d-block d-sm-none mt-2">
                 </div>
               </div>
             </div>
@@ -124,13 +124,13 @@ export default function Profile() {
           <hr />
 
           {/* Profile Posts */}
-          <div className="profile__posts">
+          <div className="profile-posts">
             <div className="container">
               <div className="row">
                 {userById.posts &&
                   userById.posts.map((post, i) => {
                     return (
-                      <div key={i} className="col-12 col-md-6 col-lg-4 col-xl-3 profile__posts-post mx-0 ">
+                      <div key={i} className="col-12 col-md-6 col-lg-4 col-xl-3 profile-posts-post mx-0 ">
                         <img src={post.imageUrl} alt="" data-bs-toggle="modal" data-bs-target={`#postModal${post.id}`} />
                         <PostModal post={post} />
                       </div>

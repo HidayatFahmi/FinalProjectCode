@@ -64,14 +64,14 @@ export default function EditProfile() {
   }
 
   return (
-      <div className="container-fluid editprofile__wrap d-flex" id="editprofile">
+      <div className="container-fluid editProfileWrap d-flex" id="editprofile">
    
         <div className="row container-fluid d-block d-lg-flex">
         <div className="col-12 col-lg-5">
-          <div className="editprofile__wrap-title text-center">
+          <div className="editProfileWrapTitle text-center">
           <p className="text-primary fw-bold fs-2 my-3">Edit Profile</p>
             <img src={imagesPreview} alt="" />
-            <div className="input-upload col-8 col-md-6 col-lg-10 m-auto">
+            <div className="inputUpload col-8 col-md-6 col-lg-10 m-auto">
               <label htmlFor="chooseImage" className="form-label">
               <i className="bx bxs-cloud-upload"></i> Choose Image
               </label>
@@ -81,45 +81,45 @@ export default function EditProfile() {
           </div>
           
           <div className="col-12 col-lg-5 d-flex justify-content-center align-items-center position-relative">
-              <form className="editprofile__wrap-form">
+              <form className="editProfileWrapForm">
                 <div className="input-box">
                   <label>Name</label>
-                  <span className="input-box__icon">
+                  <span className="input-box-icon">
                   <i className="bx bxs-id-card"></i>
                   </span>
                   <input ref={loggedNameRef} defaultValue={loggedUser.name} type="text" autoComplete="new-password" required />
                 </div>
                 <div className="input-box">
                   <label>Username</label>
-                  <span className="input-box__icon">
+                  <span className="input-box-icon">
                   <i className="bx bxs-user"></i>
                   </span>
                   <input ref={loggedUsernameRef} defaultValue={loggedUser.username} type="text" autoComplete="new-password" required />
                 </div>
                 <div className="input-box">
                   <label>Email</label>
-                  <span className="input-box__icon">
+                  <span className="input-box-icon">
                   <i className="bx bxs-envelope"></i>
                   </span>
                   <input ref={loggedEmailRef} defaultValue={loggedUser.email} type="email" autoComplete="new-password" required />
                 </div>
                   <div className="input-box">
                   <label>Phone Number</label>
-                  <span className="input-box__icon">
+                  <span className="input-box-icon">
                   <i className="bx bxs-phone"></i>
                   </span>
                   <input ref={loggedPhoneNumberRef} defaultValue={loggedUser.phoneNumber} type="number" autoComplete="new-password" required />
                 </div>
                 <div className="input-box">
                   <label>Bio</label>
-                  <span className="input-box__icon">
+                  <span className="input-box-icon">
                   <i className="bx bxs-notepad"></i>
                   </span>
                   <input ref={loggedBioRef} defaultValue={loggedUser.bio} type="text" autoComplete="new-password" required />
                 </div>
                 <div className="input-box">
                   <label>Website</label>
-                  <span className="input-box__icon">
+                  <span className="input-box-icon">
                   <i className="bx bx-globe"></i>
                   </span>
                   <input ref={loggedWebsiteRef} defaultValue={loggedUser.website} type="text" autoComplete="new-password" required />

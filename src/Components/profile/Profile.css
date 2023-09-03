@@ -1,25 +1,6 @@
 
-/* @media(max-width : 3000px){
-    .profile__header-image img{
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-} */
-
-/* @media(max-width : 1000px){
-    .profile__header-image img{
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-}  */
-
-
 @media(max-width : 3000px){
-    .profile__header-image img{
+    .profile-header-image img{
         width: 160px;
         height: 160px;
         border-radius: 50%;
@@ -28,7 +9,7 @@
 }
 
 @media(max-width : 1000px){
-    .profile__header-image img{
+    .profile-header-image img{
         width: 100px;
         height: 100px;
         border-radius: 50%;
@@ -41,16 +22,16 @@
     font-size: 20px;
 }
 
-.profile__header-caption-2 {
+.profile-header-caption-2 {
     font-size: 20px;
 }
-.profile__header-image{
+.profile-header-image{
     width: 240px;
     height: 170px;
 
 }
 
-.profile__posts-post img{
+.profile-posts-post img{
     width: 90%;
     height: 70%;
 

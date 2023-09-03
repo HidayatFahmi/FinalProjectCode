@@ -21,10 +21,10 @@ export default function Sidebar() {
     <section id="sidebar" className="sidebar">
       <div className="container-fluid bg-light">
         <div className="row">
-          <div className="sidebar__wrap d-flex flex-column ">
-            <div className="sidebar__wrap_content">
+          <div className="sidebarWrap d-flex flex-column ">
+            <div className="sidebarWrapContent">
               <hr className="text-primary d-none d-sm-block" />
-              <ul className="sidebar__wrap_content-list nav nav-pills flex-column mt-2 mt-sm-0 scrollable-list" id="menu">
+              <ul className="sidebarWrapContentList nav nav-pills flex-column mt-2 mt-sm-0 scrollable-list" id="menu">
                 {following &&
                   following.map((following, i) => {
                     return (

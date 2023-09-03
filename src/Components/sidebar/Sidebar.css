@@ -1,4 +1,4 @@
-.sidebar__wrap_content-list img{
+.sidebarWrapContentList img{
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -16,11 +16,11 @@
   }
   
 
-.timelinePost__content-comment form{
+.timelinePostContentComment form{
     display: flex;
     justify-content: space-between;
 }
 
-.timelinePost__content-comment input{
+.timelinePostContentComment input{
     border: none;
 }

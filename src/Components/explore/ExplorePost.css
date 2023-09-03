@@ -1,11 +1,11 @@
 
-.sidePost__content-image img{
+.sidePostContentImage img{
     width: 85%;
     height: auto;
 }
 
 
-.explore-profile img {
+.exploreProfile img {
     width: 35px;
     height: 35px;
     border-radius: 50%;
